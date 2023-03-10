@@ -1,7 +1,10 @@
 {{ config(
   enabled = true if var('user_properties', false) else false,
-  materialized = "table"
+  materialized = "table",
+  database = 'clean-divbrands',
+  dataset = 'clean_ga4_cozislides'
 ) }}
+
 
 -- Remove null user_pseudo_id (users with privacy enabled)
 with events_from_valid_users as (

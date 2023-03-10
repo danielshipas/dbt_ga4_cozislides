@@ -1,6 +1,10 @@
 {{ config(
-  enabled= var('conversion_events', false) != false
+  enabled= var('conversion_events', false) != false,
+  materialized = 'view',
+    database = 'clean-divbrands',
+    dataset = 'clean_ga4_cozislides'
 ) }}
+
 
 select 
     page_key

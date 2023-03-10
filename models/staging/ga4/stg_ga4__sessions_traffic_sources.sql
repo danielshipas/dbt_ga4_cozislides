@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized = 'view',
+    database = 'clean-divbrands',
+    dataset = 'clean_ga4_cozislides')
+}}
+
 with session_events as (
     select 
         session_key,

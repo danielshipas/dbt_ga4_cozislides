@@ -1,6 +1,8 @@
 {{ config(
-  enabled = true if var('derived_user_properties', false) else false,
-  materialized = "table"
+  enabled = true if var('derived_session_properties', false) else false,
+  materialized = "table",
+  database = 'clean-divbrands',
+  dataset = 'clean_ga4_cozislides'
 ) }}
 
 -- Remove null user_pseudo_id (users with privacy enabled)

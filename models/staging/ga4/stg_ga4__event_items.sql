@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized = 'view',
+    database = 'clean-divbrands',
+    dataset = 'clean_ga4_cozislides')
+}}
+
 with items_with_params as (
     select
         event_key,

@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized = 'view',
+    database = 'clean-divbrands',
+    dataset = 'clean_ga4_cozislides')
+}}
+
 with event_and_query_string as 
 (
     select 

@@ -7,7 +7,9 @@
     "field": "session_partition_date",
     "data_type": "date",
     "granularity": "day"
-    }
+    },
+    database = 'clean-divbrands',
+    dataset = 'clean_ga4_cozislides'
 ) }}
 
 

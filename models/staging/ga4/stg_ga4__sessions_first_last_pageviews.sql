@@ -1,3 +1,10 @@
+{{
+  config(
+    materialized = 'view',
+    database = 'clean-divbrands',
+    dataset = 'clean_ga4_cozislides')
+}}
+
 with page_views_first_last as (
     select
         session_key,

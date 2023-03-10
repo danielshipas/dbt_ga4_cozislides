@@ -1,5 +1,8 @@
 {{
-    config(materialized = "table")
+    config(materialized = "table",
+      database = 'clean-divbrands',
+      dataset = 'clean_ga4_cozislides'
+    )
 }}
 
 with page_views_first_last as (
